@@ -1,0 +1,33 @@
+// =============================================
+// Primary Break Points
+// =============================================
+
+$bp-xsmall: 479px;
+$bp-small: 599px;
+$bp-medium: 767px;
+$bp-large: 979px;
+$bp-xlarge: 1199px;
+
+// bootstrap override
+$screen-xxs: $bp-xsmall + 1;
+$screen-xs: $bp-small + 1;
+$screen-sm: $bp-medium + 1;
+$screen-md: $bp-large + 1;
+$screen-lg: $bp-xlarge + 1;
+
+$smallest_only  : "only screen and (max-width: " + $bp-xsmall + ")";
+$mobile_only    : "only screen and (max-width: " + $bp-medium + ")";
+$not_mobile     : "only screen and (min-width: " + ($bp-medium + 1) + ")";
+$tablet_only    : "only screen and (min-width: " + ($bp-medium + 1) + ") and (max-width: " + $bp-large ")";
+$desktop_only   : "only screen and (min-width: " + ($bp-large + 1) + ") and (max-width: " + $bp-xlarge ")";
+$wide_only      : "only screen and (min-width: " + $bp-xlarge + ")";
+
+// =============================================
+// Typography
+// =============================================
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Exo+2:400,700&subset=cyrillic,latin');
+
+// Font Stacks
+$f-stack-sans: 'Open Sans', 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-serif: 'Exo 2', Georgia, Times, 'Times New Roman', serif;

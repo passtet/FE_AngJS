@@ -1,0 +1,20 @@
+@import 'vars';
+
+// Vendor
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../node_modules/normalize-scss/fork-versions/default/normalize';
+@import '../node_modules/animate.scss/vendor/assets/stylesheets/animate';
+@import 'animate';
+
+// Core
+@import 'base';
+
+// Layout
+@import 'header';
+@import 'footer';
+
+
+// Pages
+@import 'page/home';
+@import 'page/article';
+@import 'page/category';
