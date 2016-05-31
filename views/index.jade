@@ -1,0 +1,18 @@
+extends layout
+
+block body
+  body(ng-controller='AppCtrl')(class="{{$route.current.bodyClass}}")
+    header
+      nav
+        ul.menu.white-box
+          li(ng-repeat="link in nav.links | limitTo: 10")
+            a(href="{{link.url}}")(ng-click="category.id={{link.id}}") {{link.name}}
+
+    div.content(ng-view)
+
+    script(src='js/lib/angular/angular.js')
+    script(src='js/app.js')
+    script(src='js/services.js')
+    script(src='js/controllers.js')
+    script(src='js/filters.js')
+    script(src='js/directives.js')

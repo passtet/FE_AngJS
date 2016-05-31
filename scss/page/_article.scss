@@ -1,0 +1,14 @@
+body.single-article {
+  main {
+    @media #{$mobile_only}, #{$tablet_only} {
+      margin-bottom: 2%;
+      padding-bottom: 2%;
+      section {
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+main.white-box.animated.fadeIn
+  h2 {{getArticle.Title}}
+  section
+    img(src='{{getArticle.Image}}')
+    | {{getArticle.Body}}
+
+aside
+  ul.mini-articles.vertical-list.animated.fadeIn.hover-box-container
+    li(ng-repeat="article in articles | filter:{category_id: getArticle.category_id }").white-box
+      article
+        img(src="{{article.Image}}")
+        section.description
+          h3
+            a(href="{{article.url}}") {{article.Title}}
+          | {{article.Body}}

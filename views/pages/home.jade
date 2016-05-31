@@ -1,0 +1,31 @@
+main.animated.fadeInDown
+  h3.debug-info Bellow is being unordered and has limit - 10
+  ul.articles.vertical-list
+    li(ng-repeat="article in articles").white-box
+      article
+        img(src="{{article.Image}}")
+        section.description
+          h3
+            a(href="{{article.url}}") {{article.Title}}
+          |{{article.Body}}
+
+aside.animated.fadeInDown
+  h3.debug-info Bellow is being orderedBy Title and has limit - 5
+  ul.mini-articles.vertical-list.hover-box-container
+    li(ng-repeat="article in articles | orderBy:'-Title' | limitTo: 5").white-box
+      article
+        img(src="{{article.Image}}")
+        section.description
+          h3
+            a(href="{{article.url}}") {{article.Title}}
+          |{{article.Body}}
+
+  h3.debug-info Bellow is being ordered by Category and has limit - 5
+  ul.mini-articles.vertical-list.hover-box-container
+    li(ng-repeat="article in articles | orderBy:'category_id' | limitTo: 5").white-box
+      article
+        img(src="{{article.Image}}")
+        section.description
+          h3
+            a(href="{{article.url}}") {{article.Title}}
+          | {{article.Body}}

@@ -1,0 +1,35 @@
+header {
+  @media #{$mobile_only} {
+    margin-bottom: 2%;
+  }
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      line-height: 35px;
+      @media #{$mobile_only} {
+        flex-direction: column;
+      }
+      > li {
+        width: 100%;
+        transition: 0.25s;
+        &:hover {
+          background: rgba(0,0,0,0.3);
+        }
+        a {
+          display: block;
+          width: 100%;
+          white-space: nowrap;
+          text-align: center;
+          transition: 0.25s;
+          text-transform: uppercase;
+          &:hover {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
